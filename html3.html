@@ -1,0 +1,310 @@
+<html>
+<body>
+<h1><center><img class="logo" src="gsc.png">GCS GLOBAL COMPUTER STUDIES</img></center></h1>
+<h1><center>HTML TUTORIAL</center></h1>
+<style>
+h1{
+color:white;
+background-color:red;
+}
+img{
+height:500px;
+}
+.logo{
+height:83px;
+border-radius:50px;
+}
+p{
+color:red;
+font-size:18;
+border-style:outset;
+}
+.lt{
+background-color:red;
+color:white;
+height:70;
+width:100;
+font-size:25;
+margin-left:500;
+}
+.rt{
+background-color:red;
+color:white;
+height:80;
+width:120;
+font-size:25;
+margin-right:500;
+}
+a{
+text-decoration:none;
+color:white;
+}
+
+</style>
+<p>
+HTML frames are used to divide your browser window into multiple sections where each section can load a separate HTML document.<br>
+ A collection of frames in the browser window is known as a frameset.<br>
+ The window is divided into frames in a similar way the tables are organized: into rows and columns.
+<br>
+Disadvantages of Frames<br>
+There are few drawbacks with using frames, so it's never recommended to use frames in your webpages −<br>
+
+Some smaller devices cannot cope with frames often because their screen is not big enough to be divided up.<br>
+
+Sometimes your page will be displayed differently on different computers due to different screen resolution.<br>
+<br>
+The browser's back button might not work as the user hopes.<br>
+
+There are still few browsers that do not support frame technology.<br>
+Creating Frames
+To use frames on a page we use &lt;frameset&gt; tag instead of &lt;body&gt; tag. <br>
+The &lt;frameset&gt; tag defines, how to divide the window into frames. <br>
+The rows attribute of &lt;frameset&gt; tag defines horizontal frames and cols attribute defines vertical frames. <br>
+Each frame is indicated by &lt;frame&gt; tag and it defines which HTML document shall open into the frame.<br>
+
+Note − The &lt;frame&gt; tag deprecated in HTML5. Do not use this element.<br>
+
+Example<br>
+Following is the example to create three horizontal frames <br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+<br>
+   &lt;head&gt;<br>
+      &lt;title&gt;HTML Frames&lt;/title&gt;<br>
+   &lt;/head&gt;
+	<br>
+   &lt;frameset rows = "10%,80%,10%"&gt;<br>
+      &lt;frame name = "top" src = "/html/top_frame.htm" /&gt;<br>
+      &lt;frame name = "main" src = "/html/main_frame.htm" /&gt;<br>
+      &lt;frame name = "bottom" src = "/html/bottom_frame.htm" /&gt;<br>
+   
+      &lt;noframes&gt;<br>
+         &lt;body&gt;Your browser does not support frames.&lt;/body&gt;<br>
+      &lt;/noframes&gt;<br>
+      
+   &lt;/frameset&gt;<br>
+   
+&lt;/html&gt;<br>
+This will produce the following result −<br>
+
+
+Example<br>
+Let's put the above example as follows, here we replaced rows attribute by cols and changed their width.<br> This will create all the three frames vertically −
+<br>
+Live Demo<br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;
+   <br>
+   &lt;head&gt;<br>
+      &lt;title&gt;HTML Frames&lt;/title&gt;<br>
+   &lt;/head&gt;<br>
+   
+   &lt;frameset cols = "25%,50%,25%"&gt;<br>
+      &lt;frame name = "left" src = "/html/top_frame.htm" /&gt;<br>
+      &lt;frame name = "center" src = "/html/main_frame.htm" /&gt;<br>
+      &lt;frame name = "right" src = "/html/bottom_frame.htm" /&gt;<br>
+      
+      &lt;noframes&gt;<br>
+         &lt;body&gt;Your browser does not support frames.&lt;/body&gt;<br>
+      &lt;/noframes&gt;<br>
+   &lt;/frameset&gt;<br>
+   
+&lt;/html&gt;<br>
+This will produce the following result −<br>
+
+<br>
+The &lt;frameset&gt; Tag Attributes<br>
+Following are important attributes of the &lt;frameset&gt; tag −<br>
+
+cols<br>
+Specifies how many columns are contained in the frameset and the size of each column. 
+<br>
+You can specify the width of each column in one of the four ways −<br>
+
+Absolute values in pixels. For example, to create three vertical frames, use cols = "100, 500, 100".
+<br>
+A percentage of the browser window. For example, to create three vertical frames, use cols = "10%, 80%, 10%".
+<br>
+Using a wildcard symbol. For example, to create three vertical frames, use cols = "10%, *, 10%". In this case wildcard takes remainder of the window.
+<br>
+As relative widths of the browser window. For example, to create three vertical frames, use cols = "3*, 2*, 1*". This is an alternative to percentages. You can use relative widths of the browser window. Here the window is divided into sixths: the first column takes up half of the window, the second takes one third, and the third takes one sixth.
+<br>
+rows<br>
+
+This attribute works just like the cols attribute and takes the same values, but it is used to specify the rows in the frameset.<br>
+ For example, to create two horizontal frames, use rows = "10%, 90%". <br>You can specify the height of each row in the same way as explained above for columns.
+
+<br>
+border
+<br>
+This attribute specifies the width of the border of each frame in pixels. For example, border = "5". A value of zero means no border.
+<br>
+
+frameborder
+<br>
+This attribute specifies whether a three-dimensional border should be displayed between frames.<br>
+ This attribute takes value either 1 (yes) or 0 (no).<br> For example frameborder = "0" specifies no border.
+
+<br>
+framespacing
+<br>
+This attribute specifies the amount of space between frames in a frameset.<br>
+ This can take any integer value.<br>
+ For example framespacing = "10" means there should be 10 pixels spacing between each frames.
+<br>
+The &lt;frame&gt; Tag Attributes
+Following are the important attributes of &lt;frame&gt; tag −
+<br>
+
+src
+<br>
+This attribute is used to give the file name that should be loaded in the frame.<br>
+ Its value can be any URL. For example, src = "/html/top_frame.htm" will load an HTML file available in html directory.
+
+<br>
+name
+<br>
+This attribute allows you to give a name to a frame. It is used to indicate which frame a document should be loaded into. <br>
+This is especially important when you want to create links in one frame that load pages into an another frame, <br>
+in which case the second frame needs a name to identify itself as the target of the link.
+
+<br>
+frameborder
+<br>
+This attribute specifies whether or not the borders of that frame are shown; 
+it overrides the value given in the frameborder attribute on the &lt;frameset&gt; tag if one is given,<br>
+ and this can take values either 1 (yes) or 0 (no).
+<br>
+marginwidth
+<br>
+This attribute allows you to specify the width of the space between the left and right of the frame's borders and the frame's content. <br>
+The value is given in pixels. For example marginwidth = "10".
+<br>
+
+marginheight
+<br>
+This attribute allows you to specify the height of the space between the top and bottom of the frame's borders and its contents.<br>
+ The value is given in pixels. For example marginheight = "10".
+
+<br>
+noresize
+<br>
+By default, you can resize any frame by clicking and dragging on the borders of a frame.<br>
+ The noresize attribute prevents a user from being able to resize the frame. <br>
+ For example noresize = "noresize".
+<br>
+
+scrolling
+<br>
+This attribute controls the appearance of the scrollbars that appear on the frame.<br>
+ This takes values either "yes", "no" or "auto". <br>
+For example scrolling = "no" means it should not have scroll bars.
+
+<br>
+longdesc
+<br>
+This attribute allows you to provide a link to another page containing a long description of the contents of the frame.<br>
+ For example longdesc = "framedescription.htm"
+<br>
+Browser Support for Frames<br>
+If a user is using any old browser or any browser, <br>which does not support frames then &lt;noframes&gt; element should be displayed to the user.
+<br>
+So you must place a &lt;body&gt; element inside the &lt;noframes&gt; element<br> because the &lt;frameset&gt; element is supposed to replace the &lt;body&gt; element, but if a browser does not understand &lt;frameset&gt; element then it should understand what is inside the &lt;body&gt; element which is contained in a &lt;noframes&gt; element.
+<br>
+You can put some nice message for your user having old browsers.<br> For example, Sorry!! your browser does not support frames. as shown in the above example.
+<br>
+Frame's name and target attributes<br>
+One of the most popular uses of frames is to place navigatio<br>n bars in one frame and then load main pages into a separate frame.
+<br>
+Let's see following example where a test.htm file has following code −
+<br>
+Live Demo<br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;
+<br>
+   &lt;head&gt;<br>
+      &lt;title&gt;HTML Target Frames&lt;/title&gt;<br>
+   &lt;/head&gt;<br>
+	
+   &lt;frameset cols = "200, *"&gt;<br>
+      &lt;frame src = "/html/menu.htm" name = "menu_page" /&gt;<br>
+      &lt;frame src = "/html/main.htm" name = "main_page" /&gt;<br>
+      
+      &lt;noframes&gt;<br>
+         &lt;body&gt;Your browser does not support frames.&lt;/body&gt;<br>
+      &lt;/noframes&gt;<br>
+   &lt;/frameset&gt;<br>
+	
+&lt;/html&gt;<br>
+Here, we have created two columns to fill with two frames.<br>
+ The first frame is 200 pixels wide and will contain the navigation menu bar implemented by menu.htm file
+ <br> The second column fills in remaining space and will contain the main part of the page and it is implemented by main.htm file. 
+ <br>
+ For all the three links available in menu bar, we have mentioned target frame as main_page, <br>
+ so whenever you click any of the links in menu bar, available link will open in main page.
+<br>
+Following is the content of menu.htm file<br>
+
+Live Demo<br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+
+   &lt;body bgcolor = "#4a7d49"&gt;<br>
+      &lt;a href = "http://www.google.com" target = "main_page"&gt;Google&lt;/a&gt;<br>
+      &lt;br /&gt;<br>
+      &lt;br /&gt;<br>
+      
+      &lt;a href = "http://www.microsoft.com" target = "main_page"&gt;Microsoft&lt;/a&gt;<br>
+      &lt;br /&gt;<br>
+      &lt;br /&gt;<br>
+      
+      &lt;a href = "http://news.bbc.co.uk" target = "main_page"&gt;BBC News&lt;/a&gt;<br>
+   &lt;/body&gt;
+	<br>
+&lt;/html&gt;<br>
+Following is the content of main.htm file −<br>
+<br>
+Live Demo<br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+
+   &lt;body bgcolor = "#b5dcb3"&gt;<br>
+      &lt;h3&gt;This is main page and content from any link will be displayed here.&lt;/h3&gt;<br>
+      &lt;p&gt;So now click any link and see the result.&lt;/p&gt;<br>
+   &lt;/body&gt;<br>
+	
+&lt;/html&gt;<br>
+When we load test.htm file, it produces following result −
+<br>
+
+Now you can try to click links available in the left panel and see the result. The targetattribute can also take one of the following values −
+<br>
+Sr.No	Option & Description<br>
+1	
+_self
+
+Loads the page into the current frame.<br>
+
+2	
+_blank
+
+Loads a page into a new browser window. Opening a new window.<br>
+
+3	
+_parent
+
+Loads the page into the parent window, which in the case of a single frameset is the main browser window.<br>
+
+4	
+_top
+
+Loads the page into the browser window, replacing any current frames.<br>
+
+5	
+targetframe
+<br>
+Loads the page into a named targetframe.<br>
+</p>
+<button class="rt"> <a href="html2.html">previous</a></button>
+</body>
+</html>

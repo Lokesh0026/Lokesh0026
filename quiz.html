@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+button.but{
+font-size:100;
+background-color:green;
+color:white;
+border:none;
+}
+p.mass{
+color:red;
+font:bold;
+font-size:26px;
+}
+a{
+color:white;
+font:bold;
+background:green;
+text-decoration:none;
+}
+</style>
+<body bgcolor="orange">
+<a href="index.html">Go back to homepage.</a>
+<h1>GENERAL QUIZ</h1>
+<form action="/action_page.php">
+ <p>1. What does HTML stand for?</p>
+ <input type="radio" id="other" name="gender" value="other">
+ <label for="male">Hyper Text Marketing Language</label><br>
+ <input type="radio" id="other" name="gender" value="other">
+ <label for="female">Hyper Text Markup Language</label><br>
+ <input type="radio" id="other" name="gender" value="other">
+ <label for="female">Hyper Text Markup Leveler</label>
+ <p class="mass" id="demo">
+ <button class="but" type="button"
+onclick='document.getElementById("demo").innerHTML="answer:
+Allofthese"'>submit</button> </p>
+
+<p> 2. Does the following C++ script have errors? #include "stdafx.h" 
+#include <iostream>
+ using namespace std; 
+ int main() {        
+ 
+  cout<<"Hello world"<<endl 
+  return 0; } 
+</p><br>
+ <input type="radio" id="age2" name="age" value="60">
+ <label for="age1">yes</label><br>
+ <input type="radio" id="age3" name="age" value="100">
+ <label for="age3">no</label><p class="mass" id="aamo"></P>
+ <p>3. In Java, a method is a container that holds classes.</p>
+
+ <input type="radio" id="age1" name="age" value="30">
+ <label for="age1">true</label><br>
+ <input type="radio" id="age3" name="age" value="100">
+ <label for="age3">false</label><p class="mass" id="aamo"></P>
+ 
+</form>
+</body>
+</html>
